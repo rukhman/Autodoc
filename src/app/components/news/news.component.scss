@@ -36,6 +36,12 @@
 @media (max-width: 1024px) {
   .news-wrap {
     padding: 24px 32px;
+
+    .news {
+      .title {
+        font-size: 32px;
+      }
+    }
   }
 }
 
