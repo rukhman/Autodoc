@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="image-wrap">
+    <img class="image" [class.no-image]="!card?.titleImageUrl" src="{{ card?.titleImageUrl || noImage }}" alt="картинка">
+  </div>
+  <div class="info">
+    <time class="date">{{ card?.publishedDate | date: "dd.MM.yyyy" }}</time>
+    <p class="description">
+      {{ card?.description }}
+    </p>
+  </div>
+</div>

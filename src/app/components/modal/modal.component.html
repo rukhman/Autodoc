@@ -1,0 +1,28 @@
+<form (ngSubmit)="sendForm()" [formGroup]="newsForm" class="modal-wrap">
+  <img (click)="close()" class="close" src="assets/images/Close.svg" alt="закрыть">
+  <ul class="modal">
+    <li class="form-item">
+      <h3 class="header">Добавить новость</h3>
+    </li>
+    <li class="form-item">
+      <input formControlName="title" class="header-input" placeholder="Заголовок" type="text">
+    </li>
+    <li class="form-item">
+      <textarea formControlName="description" class="header-textarea" placeholder="Текст" name="" id="" cols="30" rows="10"></textarea>
+    </li>
+    <li class="form-item">
+      <label class="input-file">
+        <span class="input-file-text" type="text"></span>
+        <input type="file" name="file">
+        <button type="button" preview-btn class="input-file-btn">Выберите файл</button>
+      </label>
+    </li>
+    <li class="form-item">
+      <ngx-preview-gallery #gallery class="preview-gallery" (images)="showImgs($event)"></ngx-preview-gallery>
+    </li>
+    <li class="form-item">
+      <button type="submit" class="send-button" [class.active-btn]="newsForm.valid">Опубликовать новость</button>
+    </li>
+  </ul>
+</form>
+

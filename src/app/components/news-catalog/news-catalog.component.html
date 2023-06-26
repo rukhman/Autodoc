@@ -1,0 +1,14 @@
+<div class="catalog">
+  <h1 class="header">Автомобильные новости</h1>
+  <ul class="list">
+    <li class="card" *ngFor="let newsItem of api.commonNewsList$ | async">
+      <a (click)="goToNewsItem(newsItem, $event)">
+        <app-news-card [card]="newsItem"></app-news-card>
+      </a>
+    </li>
+  </ul>
+  <div
+  class="view-port"
+  inViewport
+  (inViewportAction)="getNews()"></div>
+</div>

@@ -1,0 +1,11 @@
+<div class="news-wrap">
+  <div class="news" *ngIf="newsItem; else noData">
+    <h2 class="title">{{ newsItem.title }}</h2>
+    <time class="date">{{ newsItem.publishedDate | date: "dd.MM.yyyy" }}</time>
+    <p class="mt-2 text" [innerHTML]="newsItem.text"></p>
+  </div>
+
+  <ng-template #noData>
+    <p>Данные не загружены</p>
+  </ng-template>
+</div>

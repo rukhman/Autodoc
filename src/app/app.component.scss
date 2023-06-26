@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+
+  .modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(131, 136, 140, .6);
+  }
+
+  .flex {
+    display: flex;
+  }
+}

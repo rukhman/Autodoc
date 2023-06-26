@@ -1,0 +1,13 @@
+<div class="preview">
+  <input hidden (change)="onFileSelected(fileInput)" class="fileInput" #fileInput id="fileInput" type="file">
+  <ul *ngIf="urls.length" class="container">
+    <li *ngFor="let url of urls; trackBy: trackByFn" (click)="fullScreenImage=url.path" class="img-wrap">
+      <div (click)="delete(url.id)" class="close"></div>
+      <div [style.background-image]="getUrl(url.path)" class="img"></div>
+    </li>
+  </ul>
+</div>
+
+<div class="full" (click)="fullScreenImage=null" *ngIf="fullScreenImage">
+  <img class="full__image" src="{{fullScreenImage}}" alt="img">
+</div>

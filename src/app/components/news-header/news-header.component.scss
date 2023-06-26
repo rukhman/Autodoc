@@ -1,0 +1,50 @@
+@import "../../other/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 24px 240px;
+
+  border-bottom: 1px solid $black10;
+
+  .title {
+    font-family: "Inter-Light";
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .add {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 24px 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding: 24px 16px;
+
+    .title {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .add {
+      position: fixed;
+      top: 50%;
+      right: 0;
+    }
+  }
+}

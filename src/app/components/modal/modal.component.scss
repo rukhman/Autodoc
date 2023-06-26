@@ -1,0 +1,104 @@
+@import '../../other/variables.scss';
+.modal-wrap {
+  position: relative;
+  .close {
+    position: absolute;
+    top: 0;
+    right: -75px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+  }
+  .modal {
+    display: flex;
+    flex-wrap: wrap;
+    width: 950px;
+    min-height: 650px;
+    background-color: $BG;
+    border-radius: 1vw;
+    padding: 55px 40px;
+
+    .form-item {
+      width: 100%;
+      margin-bottom: .5vw;
+    }
+
+    .header {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      color: $black100;
+    }
+
+    .header-input, .header-textarea, .send-button, .input-file {
+      width: 100%;
+      background-color: $black05;
+      padding: 10px;
+      border-radius: 1vw;
+      border: none;
+    }
+
+    .input-file {
+      display: flex;
+      justify-content: center;
+      border: 1px dashed $link;
+      background-color: transparent;
+      padding: 0;
+
+      .input-file-btn {
+        width: 100%;
+        height: 100%;
+        padding: 1vw;
+        border: none;
+        color: $link;
+        background-color: transparent;
+      }
+    }
+
+    .send-button {
+      background-color: $black10;
+    }
+
+    .input-file {
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+.preview-gallery {
+  width: 100%;
+}
+
+.active-btn {
+  background-color: $black100 !important;
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .modal-wrap {
+    .modal {
+      padding: 15px;
+      width: 90vw;
+
+      .header-input {
+        padding: 20px;
+      }
+      .input-file {
+        .input-file-btn {
+          padding: 4vw;
+        }
+      }
+
+      .header {
+        font-size: 24px;
+      }
+    }
+
+    .close {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<header class="header">
+  <a href="/"><img class="img" src="assets/images/Logo.svg" alt="Главная"></a>
+  <h2 class="title">ПОРТАЛ НОВОСТЕЙ</h2>
+  <button [class.display-none]="helper.isAddDisabled$ | async" (click)="helper.isModalOpened = true" class="add"><img class="img" src="assets/images/add_news.svg" alt="Добавить"></button>
+</header>
