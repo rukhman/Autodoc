@@ -38,4 +38,5 @@ export class AppComponent implements OnInit, OnDestroy {
   onResize(event: any): void {
     this.helper.innerWidth = event?.target?.innerWidth
   }
+  
 }
